@@ -38,7 +38,7 @@ services:
     environment:
       - JAVA_OPTS=""
     volumes:
-      - "/var/lib/jenkins/workspace/task1-dockerfile/target/docker-java-app-example.jar:/docker-java-app-example.jar"
+      - "/var/lib/jenkins/workspace/test/target/springboot-helloworld-0.0.1.jar:/springboot-helloworld-0.0.1.jar"
     command: ['java', '-jar', 'docker-java-app-example.jar']
   sonarscanner:
     container_name: sonarscanner
