@@ -30,6 +30,7 @@ services:
     volumes:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
+  
   java:
     image: openjdk:8
     container_name: "bhavya"
@@ -40,7 +41,8 @@ services:
     volumes:
       - "/var/lib/jenkins/workspace/test/target/springboot-helloworld-0.0.1.jar:/springboot-helloworld-0.0.1.jar"
     command: ['java', '-jar', 'docker-java-app-example.jar']
-  sonarscanner:
+ 
+ sonarscanner:
     container_name: sonarscanner1
     image: newtmitch/sonar-scanner
     networks:
